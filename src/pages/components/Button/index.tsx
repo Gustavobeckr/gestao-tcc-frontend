@@ -3,7 +3,7 @@ import * as C from "./styles";
 
 type buttonProp = {
   Text: String;
-  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick: () => void;
 };
 
 const Button = (prop: buttonProp) => {
