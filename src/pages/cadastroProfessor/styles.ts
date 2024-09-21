@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: self-start;
-  justify-content: flex-start;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 10px;
   background-color: aliceblue;
 `;

@@ -1,25 +1,28 @@
 "use client";
 import React, { useState } from "react";
 import * as C from "./styles";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import { redirect } from "next/dist/server/api-utils";
-import { useNavigate } from "react-router-dom";
 import { useLogin } from "../hooks/useLogin";
+import Button from "../components/Button";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const { matricula, senha, setMatricula, setSenha, logarUsuario } = useLogin();
-
-  const handleLogin = async () => {
-    const response = await logarUsuario();
-
-    if (response) {
-    }
-  };
+  const router = useRouter();
 
   return (
     <C.Container>
-      <C.Label>HOME</C.Label>
+      <Button
+        Text={"Cadastrar Alunos"}
+        onClick={() => {
+          router.push("/cadastroAluno");
+        }}
+      />
+      <Button
+        Text={"Cadastrar Professores"}
+        onClick={() => {
+          router.push("/cadastroProfessor");
+        }}
+      />
+      <Button Text={"Vincular Orientadores"} onClick={() => {}} />
     </C.Container>
   );
 }

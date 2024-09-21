@@ -12,7 +12,7 @@ export default function Login() {
   const { matricula, senha, setMatricula, setSenha, logarUsuario } = useLogin();
   const router = useRouter();
   const handleLogin = async () => {
-    const response = await logarUsuario();
+    const response = true; // await logarUsuario();
 
     if (response) {
       router.push("/home");
