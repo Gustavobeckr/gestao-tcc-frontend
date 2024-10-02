@@ -24,6 +24,8 @@ export default function CadastroAluno() {
 
     if (response) {
       router.push("/home");
+    } else {
+      alert("Erro ao cadastrar Aluno!");
     }
   };
 

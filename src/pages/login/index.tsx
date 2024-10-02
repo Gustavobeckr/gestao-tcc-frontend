@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import * as C from "./styles";
 import Input from "../components/Input";

@@ -24,6 +24,8 @@ export default function CadastroProfessor() {
 
     if (response) {
       router.push("/home");
+    } else {
+      alert("Erro ao cadastrar professor!");
     }
   };
   return (
