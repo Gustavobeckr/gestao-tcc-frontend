@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import * as C from "./styles";
 import { useLogin } from "../hooks/useLogin";

@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import * as C from "./styles";
 import Input from "../components/Input";
@@ -12,10 +11,12 @@ export default function Login() {
   const { matricula, senha, setMatricula, setSenha, logarUsuario } = useLogin();
   const router = useRouter();
   const handleLogin = async () => {
-    const response = true; // await logarUsuario();
+    const response = await logarUsuario();
 
-    if (response) {
+    if (response.status) {
       router.push("/home");
+    } else {
+      alert("Login Inválido");
     }
   };
 
@@ -24,7 +25,7 @@ export default function Login() {
       <C.Label>Gestao TCC</C.Label>
       <C.Content>
         <Input
-          type="text"
+          type="number"
           placeholder="Digite sua matrícula"
           value={matricula}
           onChange={(e) => setMatricula(e.target.value)}

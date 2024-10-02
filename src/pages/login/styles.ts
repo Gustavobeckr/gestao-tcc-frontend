@@ -16,10 +16,10 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 500px;
   box-shadow: 0 1px 2px #0003;
   background-color: white;
-  max-width: 350px;
+
   padding: 20px;
   border-radius: 5px;
 `;
